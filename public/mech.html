@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* General Styles */
+        body {
+    font-family: "Poppins",sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('plane_blue.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+/* Header Styles */
+header {
+    background: #004080;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: rgb(252, 252, 246);
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 40px;
+    background: url('mech.jpg') no-repeat center center;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+}
+
+
+.hero button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    background: #004080;
+    color: rgb(254, 249, 254);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hero button:hover {
+    background: #002a5e;
+}
+
+/* Sections */
+section {
+    padding: 40px;
+    background: white;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#exams {
+    background: #f4dbf5;
+    text-align: center;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#Subjects">Subjects</a></li>
+                <li><a href="#exams">Top Exams</a></li>
+                <li><a href="#colleges">Featured Colleges</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>Mechanical Engineering </h1>
+        <p>Subjects, Semester-wise Syllabus, Top Exams</p>
+        <button onclick="scrollToExams()">View Exam</button>
+        <button onclick="window.location.href='https://engg.dypvp.edu.in/syllabus/Mechanical/BE-Mech-2019.pdf'"">
+            Download Syllabus
+        </button>
+        
+    </section>
+
+    <section id="overview">
+        <h2>Overview</h2>
+        <p>Mechanical Engineering courses provide students with a comprehensive understanding of the design, analysis, manufacturing, and maintenance of mechanical systems. The Mechanical Engineering syllabus covers the application of scientific, mathematical, and engineering principles to develop machines, tools, and thermal systems that power industries and everyday life.  
+
+            Mechanical Engineering falls under the broad spectrum of engineering disciplines, offering a strong foundation in mechanics, thermodynamics, and materials science. Some important Mechanical Engineering subjects include Engineering Mechanics, Fluid Mechanics, Thermodynamics, Heat and Mass Transfer, Machine Design, Manufacturing Processes, Robotics and Automation, Automotive Engineering, Computational Fluid Dynamics, and Renewable Energy Systems.  
+            
+            The Mechanical Engineering syllabus is structured to include core subjects, elective courses, hands-on laboratory experiments, industry-driven workshops, internship programs, and a final-year research project. This curriculum equips students with essential skills, such as problem-solving, analytical thinking, technical drawing, computational modeling, teamwork, and creativity.  
+            
+            Students can further specialize in various areas of Mechanical Engineering at the postgraduate level, including Advanced Manufacturing, Robotics and Automation, Thermal Engineering, Fluid Mechanics, Materials Science, Computational Mechanics, and Mechatronics.</p>
+    </section>
+
+    <section id="syllabus">
+        <h2>Syllabus</h2>
+        <div class="timeline">
+            <div class="semester">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>Semester 1</h3>
+                    <p>📌 Applied Physics</p>
+                    <p>📌 Applied Mathematics -1</p>
+                    <p>📌 Fundamentals of Mechanics</p>
+                    <p>📌 	
+                        Engineering Drawing - I</p>
+                </div>
+            </div>
+    
+            <div class="semester">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>Semester 2</h3>
+                    <p>📌 Applied Chemistry</p>
+                    <p>📌 Applied Mathematics -2</p>
+                    <p>📌 Elements of Electrical Engineering</p>
+                    <p>📌 Thermodynamics</p>
+                </div>
+            </div>
+    
+            <div class="semester">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>Semester 3</h3>
+                    <p>📌 Electrical Technology</p>
+                    <p>📌 Fluid Mechanics and Fluid Machines</p>
+                    <p>📌 Thermal Engineering</p>
+                    <p>📌 	
+                        Machine Drawing</p>
+                </div>
+            </div>
+    
+            <div class="semester">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>Semester 4</h3>
+                    <p></p>📌Manufacturing Process - I
+                    <p></p>📌Material Science
+                    <p></p>📌Mechanics of Solids
+                    <p></p>📌Theory of Machine
+                </div>
+            </div>
+    
+            <div class="semester">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>Semester 5</h3>
+                    <p></p>📌Computer-Aided Design and Manufacturing
+                    <p></p>📌Manufacturing Process - II
+                   <p></p> 📌	
+                   Estimating and Costing
+                    <p></p>📌Automobile Engineering
+                </div>
+            </div>
+    
+            <div class="semester">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>Semester 6</h3>
+                    <p></p>📌Applied Thermodynamics
+
+                    <p></p>📌Automobile Engineering
+
+                    <p></p>📌Kinematics and Dynamics of Machines
+
+                    <p></p>📌Industrial Engineering and Operations Research
+                </div>
+            </div>
+    
+            <div class="semester">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>Semester 7</h3>
+                    <p></p>📌 Machine Design
+
+                    <p></p>📌Vibration and Noise Control
+
+                    <p></p>📌Control Systems
+
+                    <p></p>📌Additive Manufacturing
+                </div>
+            </div>
+    
+            <div class="semester">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>Semester 8</h3>
+                    <p>📌 Biomechanics</p>
+                    <p>📌 Major Project Work</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+    
+        .semester {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            position: relative;
+        }
+    
+        .dot {
+            width: 15px;
+            height: 15px;
+            background: #6195c9;
+            border-radius: 50%;
+            position: absolute;
+            left: -30px;
+            animation: bounce 1.5s infinite;
+        }
+    
+        .content {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border-left: 5px solid #004080;
+            width: 100%;
+        }
+    
+        .content h3 {
+            color: #004080;
+            margin: 0;
+        }
+    
+        .content p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    
+        .semester::before {
+            content: "";
+            position: absolute;
+            width: 5px;
+            background: #004080;
+            top: 0;
+            left: -25px;
+            height: 100%;
+        }
+    
+        .semester:last-child::before {
+            height: 50%;
+        }
+    
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+    <style>
+        .tree ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        .toggle {
+            cursor: pointer;
+            font-weight: bold;
+            color: #004080;
+            display: block;
+            padding: 5px;
+        }
+        
+        .toggle:hover {
+            color: #002a5e;
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+    
+    <script>
+        document.querySelectorAll('.toggle').forEach(item => {
+            item.addEventListener('click', () => {
+                let nextElement = item.nextElementSibling;
+                if (nextElement) {
+                    nextElement.classList.toggle('hidden');
+                    item.textContent = nextElement.classList.contains('hidden') ? '▶ ' + item.textContent.slice(2) : '▼ ' + item.textContent.slice(2);
+                }
+            });
+        });
+    </script>
+    
+    
+    <style>
+        .timeline {
+            position: relative;
+            padding-left: 20px;
+        }
+    
+        .semester {
+            position: relative;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background: white;
+            border-left: 4px solid #004080;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .semester h3 {
+            margin: 0;
+            color: #004080;
+        }
+    
+        .semester p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    </style>
+
+
+   
+<section id="colleges">
+    <h2>Featured Colleges</h2>
+    <div class="college-container">
+        <div class="college-card">
+            <h3>🚀 IIT Madras</h3>
+            <p>Ranked as the top engineering institute in India.</p>
+        </div>                                                                  
+        <div class="college-card">
+            <h3>✈️ IIT Bombay</h3>
+            <p>Offers world-class aerospace engineering programs.</p>
+        </div>
+        <div class="college-card">
+            <h3>🛩️ VIT Vellore</h3>
+            <p>Prestigious, Innovative, Technological, Renowned.</p>
+        </div>
+        <div class="college-card">
+            <h3>🏗️ MIT Manipal</h3>
+            <p>Known for its cutting-edge research in aviation.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Featured Colleges Section */
+    .college-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .college-card {
+        background: rgb(226, 178, 99);
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        border-left: 5px solid #004080;
+        transition: transform 0.3s;
+    }
+
+    .college-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .college-card h3 {
+        color: #004080;
+        margin-bottom: 5px;
+    }
+
+    .college-card p {
+        font-size: 14px;
+        color: #333;
+    }
+</style>
+
+    
+
+<section id="exams">
+    <h2>Top Entrance Exams</h2>
+    <ul class="exam-list">
+        <li><a href="https://jeemain.nta.nic.in/" target="_blank">JEE Main</a></li>
+        <li><a href="https://jeeadv.ac.in/" target="_blank">JEE Advanced</a></li>
+        <li><a href="https://www.bitsadmission.com/" target="_blank">BITSAT</a></li>
+        <li><a href="https://viteee.vit.ac.in/" target="_blank">VITEEE</a></li>
+        <li><a href="https://www.srmist.edu.in/admission-india/engineering/srmjeee/" target="_blank">SRMJEEE</a></li>
+        <li><a href="https://www.amrita.edu/admissions/btech" target="_blank">AEEE</a></li>
+        <li><a href="https://www.iist.ac.in/admissions/undergraduate" target="_blank">IIST Admission Test</a></li>
+        <li><a href="https://www.ametuniv.ac.in/admissions.html" target="_blank">AMET Entrance Exam</a></li>
+        <li><a href="https://admissions.cusat.ac.in/" target="_blank">CUSAT CAT</a></li>
+        <li><a href="https://nest.lpu.in/engineering/" target="_blank">LPUNEST</a></li>
+    </ul>
+</section>
+
+<style>
+    .exam-list {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .exam-list li {
+        margin: 10px 0;
+    }
+
+    .exam-list a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        color: #004080;
+        transition: color 0.3s;
+    }
+
+    .exam-list a:hover {
+        color: #ff6600;
+    }
+</style>
+
+
+    <script>
+        function scrollToExams() {
+            document.getElementById('exams').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

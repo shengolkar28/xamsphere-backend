@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* General Styles */
+        body {
+    font-family: "Poppins",sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('plane_blue.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+/* Header Styles */
+header {
+    background: #004080;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: rgb(252, 252, 246);
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 40px;
+    background: url('structural.jpg') no-repeat center center;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+}
+
+
+.hero button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    background: #004080;
+    color: rgb(254, 249, 254);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hero button:hover {
+    background: #002a5e;
+}
+
+/* Sections */
+section {
+    padding: 40px;
+    background: white;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#exams {
+    background: #f4dbf5;
+    text-align: center;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#Subjects">Subjects</a></li>
+                <li><a href="#exams">Top Exams</a></li>
+                <li><a href="#colleges">Featured Colleges</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>Structural Engineering </h1>
+        <p>Subjects, Semester-wise Syllabus, Top Exams</p>
+        <button onclick="scrollToExams()">View Exam</button>
+        <button onclick="window.location.href='https://dbatu.ac.in/wp-content/uploads/2017/05/MTech-Thermal-Engineering-Syllabus-29.4.2017.pdf'"">
+            Download Syllabus
+        </button>
+        
+    </section>
+
+    <section id="overview">
+        <h2>Overview</h2>
+        <p>​Structural Engineering courses provide students with a comprehensive understanding of the analysis, design, construction, and maintenance of structures that can withstand various loads and environmental conditions. The Structural Engineering syllabus covers the application of scientific, mathematical, and engineering principles to develop safe and sustainable buildings, bridges, dams, and other infrastructures.​
+            Shiksha
+            
+            Structural Engineering is a specialized branch within Civil Engineering, offering a strong foundation in mechanics, material science, and design principles. Some important Structural Engineering subjects include Structural Analysis, Design of Concrete Structures, Design of Steel Structures, Foundation Engineering, Earthquake Engineering, Finite Element Analysis, and Construction Management.</p></section>
+
+    <section id="syllabus">
+        <h2>Syllabus</h2>
+        <div class="timeline">
+            <div class="semester">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>Semester 1</h3>
+                    <p></p>📌 Advanced Structural Analysis​
+
+                    <p></p>📌Theory of Elasticity and Plasticity​
+
+                    <p></p>📌Finite Element Method​
+
+                    <p></p>📌Structural Dynamics
+                </div>
+            </div>
+    
+            <div class="semester">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>Semester 2</h3>
+                    <p></p>📌Design of Advanced Concrete Structures​
+
+                    <p></p>📌Design of Advanced Steel Structures​
+
+                    <p></p>📌Earthquake Engineering​
+
+                    <p></p>📌Elective 2 (e.g., Bridge Engineering)
+                </div>
+            </div>
+    
+            <div class="semester">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>Semester 3</h3>
+                    <p></p>📌 Structural Stability
+
+                    <p></p>📌Elective 3 (e.g., Offshore Structures)
+
+                </div>
+            </div>
+    
+            <div class="semester">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>Semester 4</h3>
+                    <p></p>📌 Dissertation / Thesis Work
+
+                    <p></p>📌Seminar / Internship Report
+                </div>
+            </div>
+    
+            
+        </div>
+    </section>
+    
+    <style>
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+    
+        .semester {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            position: relative;
+        }
+    
+        .dot {
+            width: 15px;
+            height: 15px;
+            background: #6195c9;
+            border-radius: 50%;
+            position: absolute;
+            left: -30px;
+            animation: bounce 1.5s infinite;
+        }
+    
+        .content {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border-left: 5px solid #004080;
+            width: 100%;
+        }
+    
+        .content h3 {
+            color: #004080;
+            margin: 0;
+        }
+    
+        .content p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    
+        .semester::before {
+            content: "";
+            position: absolute;
+            width: 5px;
+            background: #004080;
+            top: 0;
+            left: -25px;
+            height: 100%;
+        }
+    
+        .semester:last-child::before {
+            height: 50%;
+        }
+    
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+    <style>
+        .tree ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        .toggle {
+            cursor: pointer;
+            font-weight: bold;
+            color: #004080;
+            display: block;
+            padding: 5px;
+        }
+        
+        .toggle:hover {
+            color: #002a5e;
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+    
+    <script>
+        document.querySelectorAll('.toggle').forEach(item => {
+            item.addEventListener('click', () => {
+                let nextElement = item.nextElementSibling;
+                if (nextElement) {
+                    nextElement.classList.toggle('hidden');
+                    item.textContent = nextElement.classList.contains('hidden') ? '▶ ' + item.textContent.slice(2) : '▼ ' + item.textContent.slice(2);
+                }
+            });
+        });
+    </script>
+    
+    
+    <style>
+        .timeline {
+            position: relative;
+            padding-left: 20px;
+        }
+    
+        .semester {
+            position: relative;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background: white;
+            border-left: 4px solid #004080;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .semester h3 {
+            margin: 0;
+            color: #004080;
+        }
+    
+        .semester p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    </style>
+
+
+   
+<section id="colleges">
+    <h2>Featured Colleges</h2>
+    <div class="college-container">
+        <div class="college-card">
+            <h3>🚀 IIT Madras</h3>
+            <p>Ranked as the top engineering institute in India.</p>
+        </div>                                                                  
+        <div class="college-card">
+            <h3>✈️ IIT Bombay</h3>
+            <p>Offers world-class engineering programs.</p>
+        </div>
+        <div class="college-card">
+            <h3>🛩️ VIT Vellore</h3>
+            <p>Prestigious, Innovative, Technological, Renowned.</p>
+        </div>
+        <div class="college-card">
+            <h3>🏗️ DTU Delhi</h3>
+            <p>Known for its cutting-edge research in Thermal Engineering.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Featured Colleges Section */
+    .college-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .college-card {
+        background: rgb(226, 178, 99);
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        border-left: 5px solid #004080;
+        transition: transform 0.3s;
+    }
+
+    .college-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .college-card h3 {
+        color: #004080;
+        margin-bottom: 5px;
+    }
+
+    .college-card p {
+        font-size: 14px;
+        color: #333;
+    }
+</style>
+
+    
+
+<section id="exams">
+    <h2>Top Entrance Exams</h2>
+    <ul class="exam-list">
+        <li><a href="https://gate2025.iitr.ac.in/" target="_blank">GATE</a></li>
+        <li><a href="https://exams.ntaonline.in/CUET-PG/" target="_blank">CUET PG</a></li>
+        <li><a href="https://admissions.vit.ac.in/vitmee-m-tech-2025-applications/login" target="_blank">VITMEE</a></li>
+    </ul>
+</section>
+
+<style>
+    .exam-list {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .exam-list li {
+        margin: 10px 0;
+    }
+
+    .exam-list a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        color: #004080;
+        transition: color 0.3s;
+    }
+
+    .exam-list a:hover {
+        color: #ff6600;
+    }
+</style>
+
+
+    <script>
+        function scrollToExams() {
+            document.getElementById('exams').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

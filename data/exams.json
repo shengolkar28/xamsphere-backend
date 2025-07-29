@@ -1,0 +1,14 @@
+{
+  "science": [
+    { "name": "JEE Main", "date": "2025-08-12" },
+    { "name": "NEET", "date": "2025-09-20" }
+  ],
+  "commerce": [
+    { "name": "CA Foundation", "date": "2025-10-15" },
+    { "name": "CMA Inter", "date": "2025-11-05" }
+  ],
+  "arts": [
+    { "name": "NIFT", "date": "2025-08-22" },
+    { "name": "NID", "date": "2025-09-10" }
+  ]
+}

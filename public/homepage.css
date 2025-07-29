@@ -1,0 +1,756 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: #f4f4f4;
+            color: #333;
+        }
+        .logo {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.logo img {
+    height: 30px;
+    margin-right: 8px;
+}
+
+.curved-dropdown {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.curved-btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.curved-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Stream Buttons */
+.stream-options {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.stream-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.stream-btn:hover {
+  background-color: #117a8b;
+}
+
+/* Upcoming Exams Section */
+.upcoming-exams {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.upcoming-exams h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+/* Exam Cards */
+.exam-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.exam-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-left: 5px solid #007bff;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.exam-card:hover {
+  transform: scale(1.02);
+}
+
+.exam-card h4 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #333;
+}
+
+.exam-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+
+.search-container input {
+    padding: 8px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.icon {
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.icon1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+/* Course Navigation Bar */
+.course-navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #01396dd3;
+    padding: 10px;
+}
+
+.course-navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+.course-navbar a:hover {
+    background-color: #333;
+}
+        .navbar1 {
+    display: flex;
+    justify-content: space-around;
+    background: #107df1;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background: #0657ad;
+            padding: 15px;
+            color: white;
+            font-weight: bold;
+            position: relative;
+        }
+        .dropdown {
+    position: relative;                  /* Stream dropdown so that curser can go on it */
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 160px;                                           /* Stream Dropdown list */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;                                            /* Stream Dropdown */
+}
+
+.dropdown-content a {
+    padding: 10px;
+    display: block;
+    color: black;
+    text-decoration: none;                                      /* Proper alignment of Stream Dropdown List */
+    border-radius: 8px;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background: #007bff;                                     /* For blue background when curser move on it */
+    color: white;
+}
+
+/* Engineering & Technology Dropdown */
+.engineering-dropdown {
+    position: relative;
+}
+
+.engineering-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;  /* Moves beside the parent dropdown */
+    top: 0;
+    min-width: 200px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.engineering-dropdown:hover .engineering-dropdown-content {
+    display: block;
+}
+/* undergraduate dropdown */
+.nested-dropdown2 {
+    position: relative;
+}
+
+.nested-dropdown-content2 {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 220px;
+    max-height: 300px;  /* Set max height for scrolling */
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1;
+    overflow-y: auto; /* Enables independent scrolling */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #007bff #f1f1f1; /* Custom scrollbar colors */
+}
+
+/* Custom scrollbar for WebKit browsers (Chrome, Safari) */
+.nested-dropdown-content2::-webkit-scrollbar {
+    width: 8px;
+}
+
+.nested-dropdown-content2::-webkit-scrollbar-thumb {
+    background: #007bff; /* Scroll thumb color */
+    border-radius: 4px;
+}
+
+.nested-dropdown-content2 a {
+    padding: 10px;
+    display: block;
+    color: black;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.nested-dropdown-content2 a:hover {
+    background: #007bff;
+    color: white;
+}
+
+.nested-dropdown2:hover .nested-dropdown-content2 {
+    display: block;
+}
+
+.stream-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.stream-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out 0.1s;
+}
+
+.stream-btn::before {
+    content: "";
+    position: absolute;
+    justify-content: center;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.411);
+    transition: left 0.2s ease-in-out;
+}
+
+.stream-btn:hover::before {
+    left: 0%;
+}
+
+.stream-btn:hover {
+    background-color: #0056b3;
+    /* transform: translateX(8px); */
+
+    transform: scale(1.2,1.2);
+}
+
+/* Ph.D. Dropdown Styling */
+.phd-dropdown {
+    position: relative;
+}
+
+.phd-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;  /* Positions beside the Ph.D. menu */
+    top: 0;
+    min-width: 250px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 10;
+}
+
+.phd-dropdown:hover .phd-dropdown-content {
+    display: block;
+}
+
+.phd-dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.phd-dropdown-content a:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Computer Science Ph.D. Dropdown */
+.computer-science-eng-dropdown {
+    position: relative;
+}
+
+.computer-science-eng-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;  /* Positions beside Computer Science Ph.D. */
+    top: 0;
+    min-width: 250px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 10;
+}
+
+.computer-science-eng-dropdown:hover .computer-science-eng-dropdown-content {
+    display: block;
+}
+
+.computer-science-eng-dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.computer-science-eng-dropdown-content a:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Mechanical Engineering Dropdown (Nested Under Ph.D.) */
+.mechanical-dropdown {
+    position: relative;
+}
+
+.mechanical-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;  /* Moves beside the Ph.D. in Mechanical Engineering */
+    top: 0;
+    min-width: 250px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 10;
+}
+
+.mechanical-dropdown:hover .mechanical-dropdown-content {
+    display: block;
+}
+
+.mechanical-dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.mechanical-dropdown-content a:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Ph.D. in Civil Engineering Dropdown */
+.phd-in-civil-dropdown {
+    position: relative;
+}
+
+.phd-in-civil-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 250px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 10;
+}
+
+.phd-in-civil-dropdown:hover .phd-in-civil-dropdown-content {
+    display: block;
+}
+
+.phd-in-civil-dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.phd-in-civil-dropdown-content a:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Ph.D. in Electrical and Electronics Engineering Dropdown */
+.phd-electrical-dropdown {
+    position: relative;
+}
+
+.phd-electrical-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;  /* Positions beside the Ph.D. menu */
+    top: 0;
+    min-width: 250px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 10;
+}
+
+.phd-electrical-dropdown:hover .phd-electrical-dropdown-content {
+    display: block;
+}
+
+.phd-electrical-dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.phd-electrical-dropdown-content a:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Ph.D. in IT Engineering Dropdown */
+.PhD-in-IT-engineering-dropdown {
+    position: relative;
+}
+
+.PhD-in-IT-engineering-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;  /* Positions it beside the IT menu */
+    top: 0;
+    min-width: 220px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 10;
+}
+
+.PhD-in-IT-engineering-dropdown:hover .PhD-in-IT-engineering-dropdown-content {
+    display: block;
+}
+
+.PhD-in-IT-engineering-dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.PhD-in-IT-engineering-dropdown-content a:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* Ph.D. in Biotechnology and Bioengineering Dropdown */
+.PhD-Biotech-dropdown {
+    position: relative;
+}
+
+.PhD-Biotech-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 220px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 11;
+}
+
+.PhD-Biotech-dropdown:hover .PhD-Biotech-dropdown-content {
+    display: block;
+}
+
+.PhD-Biotech-dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.PhD-Biotech-dropdown-content a:hover {
+    background: #007bff;
+    color: white;
+}
+
+
+/* Styling for Nested Dropdown */
+.nested-dropdown {
+    position: relative;
+}
+
+.nested-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%; /* Moves beside the main dropdown */
+    top: 20px;  /* Moves slightly downwards */                     /* for beside dropdown under science */
+    min-width: 200px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.nested-dropdown:hover .nested-dropdown-content {
+    display: block;
+}
+
+
+        .curved-dropdown {
+    position: relative;
+    display: flex;
+    justify-content: center;         /* Choose your stream box in the center */
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+.curved-btn {
+    background: #2a9df4;
+    color: rgb(0, 0, 0);
+    padding: 12px 20px;
+    border: none;                      /* Choose your stream box */
+    border-radius: 15px; 
+    font-size: 25px;
+    font-weight: bold;  
+}
+
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+            background-color: #8bc3e6;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .hero img {
+            width: 300px;
+            border-radius: 10px;
+        
+        }
+        .choose {
+            padding: 20px;
+            text-align: center;
+        }
+        .choose {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .choose div {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .choose div:hover {
+            background: #007bff;
+            color: white;
+        }
+        .upcoming-exams {
+            padding: 20px;
+            background: rgb(197, 196, 196);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 98px;
+
+        }
+
+        .postgraduate-dropdown {
+    position: relative;
+}
+
+.postgraduate-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;        
+    top: 0%;
+    min-width: 250px;
+    max-height: 350px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.postgraduate-dropdown-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.postgraduate-dropdown-content::-webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 4px;
+}
+
+.postgraduate-dropdown:hover .postgraduate-dropdown-content {
+    display: block;
+}
+
+/* Generic Styling for Nested Dropdowns */
+.pg-mech-dropdown, .pg-civil-dropdown, .pg-electrical-dropdown, .pg-cs-dropdown, .pg-ece-dropdown, .pg-chem-dropdown, .pg-aero-dropdown {
+    position: relative;
+}
+
+.pg-mech-dropdown-content, 
+.pg-civil-dropdown-content, 
+.pg-electrical-dropdown-content, 
+.pg-cs-dropdown-content,
+.pg-ece-dropdown-content,
+.pg-chem-dropdown-content,
+.pg-aero-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 220px;
+    max-height: 200px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 10;
+    overflow-y: auto; /* Enables independent scrolling */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #007bff #f1f1f1;
+}
+
+/* Show Dropdown on Hover */
+.pg-mech-dropdown:hover .pg-mech-dropdown-content,
+.pg-civil-dropdown:hover .pg-civil-dropdown-content,
+.pg-electrical-dropdown:hover .pg-electrical-dropdown-content,
+.pg-cs-dropdown:hover .pg-cs-dropdown-content,
+.pg-ece-dropdown:hover .pg-ece-dropdown-content,
+.pg-chem-dropdown:hover .pg-chem-dropdown-content,
+.pg-aero-dropdown:hover .pg-aero-dropdown-content {
+    display: block;
+}
+
+/* Styling Links inside Dropdown */
+.postgraduate-dropdown-content a,
+.pg-mech-dropdown-content a,
+.pg-civil-dropdown-content a,
+.pg-electrical-dropdown-content a,
+.pg-cs-dropdown-content a,
+.pg-ece-dropdown-content a,
+.pg-chem-dropdown-content a,
+.pg-aero-dropdown-content a {
+    padding: 10px;
+    display: block;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.postgraduate-dropdown-content a:hover,
+.pg-mech-dropdown-content a:hover,
+.pg-civil-dropdown-content a:hover,
+.pg-electrical-dropdown-content a:hover,
+.pg-cs-dropdown-content a:hover,
+.pg-ece-dropdown-content a:hover,
+.pg-chem-dropdown-content a:hover,
+.pg-aero-dropdown-content a:hover {
+    background: #007bff;
+    color: white;
+}

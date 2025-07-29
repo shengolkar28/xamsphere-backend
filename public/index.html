@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamHub - Login / Signup</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://source.unsplash.com/1600x900/?exam,education,students') no-repeat center center/cover;
+            position: relative;
+        }
+
+        .examhub-title {
+            position: relative;
+            font-size: 50px;
+            font-weight: 800;
+            color: #FFD700; /* Golden color */
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+            letter-spacing: 2px;
+            margin-bottom: 30px; /* Adjusted margin to move it down */
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.8); /* Dark background for contrast */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+            width: 400px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            color: white;
+        }
+
+        .container:hover {
+            transform: scale(1.03);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #FFD700;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            background: #222;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 12px 0;
+            color: white;
+        }
+
+        .input-group input {
+            width: 100%;
+            border: none;
+            background: none;
+            outline: none;
+            font-size: 16px;
+            padding-left: 10px;
+            color: white;
+        }
+
+        .input-group i {
+            color: #FFD700;
+            font-size: 18px;
+        }
+
+        button {
+            background: #FFD700;
+            color: black;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background: #FFC107;
+        }
+
+        .toggle-btn {
+            background: none;
+            border: none;
+            color: #FFD700;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 15px; /* Moved slightly down */
+        }
+
+        .toggle-btn:hover {
+            text-decoration: underline;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+    </style>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<h1 class="examhub-title">ExamHub</h1>
+
+<div class="container">
+    <h2 id="form-title">Login</h2>
+
+    <!-- Login Form -->
+    <div id="login-form">
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="login-username" placeholder="Enter your username" required>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="login-password" placeholder="Enter your password" required>
+        </div>
+        <button onclick="checkUser()">Login</button>
+        <p style="margin-top: 20px;">New user? <button class="toggle-btn" onclick="toggleForms()">Sign Up</button></p> <!-- Adjusted spacing -->
+    </div>
+
+    <!-- Signup Form -->
+    <div id="signup-form" class="hidden">
+        <div class="input-group">
+            <i class="fas fa-user-plus"></i>
+            <input type="text" id="signup-username" placeholder="Choose a username" required>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="signup-password" placeholder="Choose a password" required>
+        </div>
+        <button onclick="signupUser()">Sign Up</button>
+        <p style="margin-top: 20px;">Already have an account? <button class="toggle-btn" onclick="toggleForms()">Login</button></p> <!-- Adjusted spacing -->
+    </div>
+</div>
+
+<script>
+    let users = {}; // Temporary storage
+
+    function toggleForms() {
+        document.getElementById("login-form").classList.toggle("hidden");
+        document.getElementById("signup-form").classList.toggle("hidden");
+        document.getElementById("form-title").innerText = 
+            document.getElementById("login-form").classList.contains("hidden") ? "Sign Up" : "Login";
+    }
+
+    function checkUser() {
+        let username = document.getElementById("login-username").value;
+        let password = document.getElementById("login-password").value;
+
+        if (users[username] && users[username] === password) {
+            alert("Login Successful! Redirecting to homepage...");
+            window.location.href = "homepage.html";
+        } else {
+            alert("Invalid username or password. Please try again.");
+        }
+    }
+
+    function signupUser() {
+        let username = document.getElementById("signup-username").value;
+        let password = document.getElementById("signup-password").value;
+
+        if (username && password) {
+            if (users[username]) {
+                alert("Username already taken! Try another.");
+            } else {
+                users[username] = password;
+                alert("Sign Up Successful! Please login.");
+                toggleForms();
+            }
+        } else {
+            alert("Please enter valid details.");
+        }
+    }
+</script>
+
+</body>
+</html>

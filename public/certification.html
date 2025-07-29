@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #1e1e1e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.course-section {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.view-more {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.course-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    scroll-behavior: smooth;
+}
+
+.course-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 250px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px; /* Ensures uniform card height */
+}
+
+.course-card img {
+    width: 50px;
+    height: 50px;
+}
+
+.course-card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.course-card p {
+    font-size: 14px;
+    color: #bbb;
+    flex-grow: 1; /* Ensures spacing consistency */
+}
+
+.course-btn {
+    background: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-top: auto; /* Pushes button to bottom */
+    cursor: pointer;
+}
+
+    </style>
+    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certification Courses</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="course-section">
+        <button class="Famous_Courses">Optional But Pivotal Courses</button>
+        <div class="course-slider">
+            <div class="course-card">
+                <img src="AIML_image.jpg">
+                <h3>AIML</h3>
+                <p>Learn AI & ML with hands-on projects.</p>
+                <button class="course-btn" onclick="window.location.href='https://developers.google.com/machine-learning/crash-course'">VIEW COURSE</button>
+
+
+            </div>
+            <div class="course-card">
+                <img src="webdevelop_image.jpg" alt="Web Development">
+                <h3>Web Development</h3>
+                <p>Master full-stack web technologies.</p>
+                <button class="course-btn" onclick="window.location.href='https://cs50.harvard.edu/web'">VIEW COURSE</button>
+
+            </div>
+            <div class="course-card">
+                <img src="cyberscurity_image.jpg" alt="CyberSecurity">
+                <h3>Cyber Security</h3>
+                <p>Defend against cyber threats.</p>
+                <button class="course-btn" onclick="window.location.href='https://coursera.org/professional-certificates/google-cybersecurity'">VIEW COURSE</button>
+
+            </div>
+            <div class="course-card">
+                <img src="cloudcomputing_image.webp" alt="Cloud Computing">
+                <h3>Cloud Computing</h3>
+                <p>Learn AWS, Azure, and GCP.</p>
+                <button class="course-btn" onclick="window.location.href='https://cloudskillsboost.google'">VIEW COURSE</button>
+
+            </div>
+            <div class="course-card">
+                <img src="datascience_image.jpg" alt="Data Science">
+                <h3>Data Science</h3>
+                <p>Become a data-driven expert.</p>
+                <button class="course-btn" onclick="window.location.href='https://cs50.harvard.edu'">VIEW COURSE</button>
+
+            </div>
+            <div class="course-card">
+                <img src="animation_image.jpg" alt="Animation">
+                <h3>Animation</h3>
+                <p>Bring ideas to life with motion.</p>
+                <button class="course-btn" onclick="window.location.href='https://alison.com'">VIEW COURSE</button>
+
+            </div>
+            <div class="course-card">
+                <img src="digitalmarkt_image.webp" alt="Digital Marketing">
+                <h3>Digital Marketing</h3>
+                <p>Master SEO, Ads, and Analytics.</p>
+                <button class="course-btn" onclick="window.location.href='https://learndigital.withgoogle.com'">VIEW COURSE</button>
+
+            </div>
+            <div class="course-card">
+                <img src="appdevelopment_image.png" alt="Full Stack Development">
+                <h3>App Development</h3>
+                <p>End-to-end development expertise.</p>
+                <button class="course-btn" onclick="window.location.href='https://cs50.harvard.edu/mobile'">VIEW COURSE</button>
+
+            </div>
+            <div class="course-card">
+                <img src="ecommerce_image.jpg" alt="E-commerce Dropshipping">
+                <h3>E-commerce Dropshipping</h3>
+                <p>Start your online business.</p>
+                <button class="course-btn" onclick="window.location.href='https://academy.hubspot.com'">VIEW COURSE</button>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
